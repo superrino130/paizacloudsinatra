@@ -33,7 +33,7 @@ use Amazon;
 # テーブル一覧
 show tables;
 # テーブル生成
-## 商品テーブル：goods
+## 商品テーブル：items
 create table Amazon.items (item_id VARCHAR(50) NOT NULL PRIMARY KEY, jname VARCHAR(50), ename VARCHAR(50));
 ## セーラーテーブル：sellers
 create table Amazon.sellers (seller_id VARCHAR(50) NOT NULL PRIMARY KEY, name VARCHAR(50), people INT);
