@@ -14,6 +14,13 @@ https://paiza.cloud/ja/
 ```
 git clone https://github.com/superrino130/paizacloudsinatra.git
 ```
+# MySQL へログイン・ログアウト
+```
+# ログイン
+mysql -u root
+# ログアウト
+quit
+```
 # MySQL へのデータ追加
 次のコマンドを実行すると、MySQL へデータが追加されます。
 ```
@@ -43,7 +50,7 @@ INSERT INTO goods VALUES ('G0005','りんご','apple');
 INSERT INTO goods VALUES ('G0006','日本梨','Japanese pear');
 INSERT INTO goods VALUES ('G0007','西洋梨','pear');
 # テーブルへデータ一括挿入
-LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/goods.csv' INTO TABLE goods COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/sellers.csv' INTO TABLE sellers COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/work.csv' INTO TABLE work COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/goods.csv' INTO TABLE goods COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/sellers.csv' INTO TABLE sellers COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/work.csv' INTO TABLE work COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
 ```
