@@ -1,7 +1,7 @@
 # paizacloudsinatra
 ハンズオン用の資料です。
 # Sinatra
-WEBアプリケーション部分は、**sinatra** を使用します。
+WEBアプリケーション部分は、**Sinatra** を使用します。
 https://sinatrarb.com/
 # MySQL
 データベースは、**MySQL** を使用します。
@@ -10,7 +10,7 @@ https://www.mysql.com/jp/
 開発及び動作確認環境は、**Paiza Cloud** を使用します。
 https://paiza.cloud/ja/
 # Github clone
-次のコマンドを実行すると、repositories がクローンされます。
+次のコマンドを実行すると、リポジトリ がクローンされます。
 ```
 git clone https://github.com/superrino130/paizacloudsinatra.git
 ```
