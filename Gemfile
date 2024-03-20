@@ -4,4 +4,5 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem 'sinatra'
-gem 'mysql2'
+gem 'rackup'
+# gem 'mysql2'

@@ -38,7 +38,7 @@ create table Amazon.goods (good_id VARCHAR(50) NOT NULL PRIMARY KEY, jname VARCH
 ## セーラーテーブル：sellers
 create table Amazon.sellers (seller_id VARCHAR(50) NOT NULL PRIMARY KEY, name VARCHAR(50), people INT);
 ## 作業テーブル：work
-create table Amazon.work (good_id VARCHAR(50) NOT NULL, seller_id VARCHAR(50) NOT NULL, name VARCHAR(50), harvest INT);
+create table Amazon.work (good_id VARCHAR(50) NOT NULL, seller_id VARCHAR(50) NOT NULL, harvest INT);
 ## テーブルの内容確認
 describe goods;
 # テーブルへデータ挿入
@@ -50,7 +50,22 @@ INSERT INTO goods VALUES ('G0005','りんご','apple');
 INSERT INTO goods VALUES ('G0006','日本梨','Japanese pear');
 INSERT INTO goods VALUES ('G0007','西洋梨','pear');
 # テーブルへデータ一括挿入
-LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/goods.csv' INTO TABLE goods COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/sellers.csv' INTO TABLE sellers COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/work.csv' INTO TABLE work COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/goods.csv' INTO TABLE goods COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\r\n';
+LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/sellers.csv' INTO TABLE sellers COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\r\n';
+LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/work.csv' INTO TABLE work COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\r\n';
+```
+# SQL 例
+```
+# 5件のみ表示の文法、VBAでは top 5、MySQLでは limit 5
+select name, harvest from work inner join sellers on work.seller_id = sellers.seller_id where good_id = 'G0005' order by harvest desc limit 5;
+
++-----------+---------+
+| name      | harvest |
++-----------+---------+
+| 青森県    |  439000 |
+| 長野県    |  132600 |
+| 岩手県    |   47900 |
+| 山形県    |   41200 |
+| 福島県    |   23700 |
++-----------+---------+
 ```
