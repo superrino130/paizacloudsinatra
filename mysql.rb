@@ -17,7 +17,7 @@ get '/:item' do
   statement = client.prepare(sql)
   @cnt = statement.execute()
   # sql = "select name, harvest from work inner join sellers on work.seller_id = sellers.seller_id where item_id = '" + params[:item] + "' order by harvest desc limit 5;"
-  sql = "select name, harvest, jname from work inner join sellers on work.seller_id = sellers.seller_id inner join items on items.item_id = worker.item_id where items.item_id = '" + params[:item] + "' order by harvest desc limit 5;"
+  sql = "select name, harvest, jname from work inner join sellers on work.seller_id = sellers.seller_id inner join items on items.item_id = work.item_id where items.item_id = '" + params[:item] + "' order by harvest desc limit 5;"
   statement = client.prepare(sql)
   @results = statement.execute()
   erb :view2

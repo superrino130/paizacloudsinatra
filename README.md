@@ -1,7 +1,7 @@
 # paizacloudsinatra
 ハンズオン用の資料です。
 # Excel 説明資料
-
+https://github.com/superrino130/paizacloudsinatra/blob/main/Excel/sql01.xlsm
 # Sinatra
 WEBアプリケーション部分は、**Sinatra** を使用します。
 https://sinatrarb.com/  
@@ -67,6 +67,19 @@ LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/work.csv' INTO TABLE
 # SQL 例
 ```
 # 5件のみ表示の文法、VBAでは top 5、MySQLでは limit 5
+select harvest from work where item_id = 'G0005' order by harvest desc limit 5;
+
++---------+
+| harvest |
++---------+
+|  439000 |
+|  132600 |
+|   47900 |
+|   41200 |
+|   23700 |
++---------+
+
+# 内部結合（inner join）の2重
 select name, harvest from work inner join sellers on work.seller_id = sellers.seller_id where item_id = 'G0005' order by harvest desc limit 5;
 
 +-----------+---------+
@@ -78,6 +91,19 @@ select name, harvest from work inner join sellers on work.seller_id = sellers.se
 | 山形県    |   41200 |
 | 福島県    |   23700 |
 +-----------+---------+
+
+# 内部結合（inner join）の3重
+ select name, harvest, jname from work inner join sellers on work.seller_id = sellers.seller_id inner join items on items.item_id = work.item_id where items.item_id = 'G0005' order by harvest desc limit 5;
+
++-----------+---------+-----------+
+| name      | harvest | jname     |
++-----------+---------+-----------+
+| 青森県    |  439000 | りんご    |
+| 長野県    |  132600 | りんご    |
+| 岩手県    |   47900 | りんご    |
+| 山形県    |   41200 | りんご    |
+| 福島県    |   23700 | りんご    |
++-----------+---------+-----------+
 ```
 # Sinatra の起動
 下記のコマンドで、**Sinatra** が起動します。

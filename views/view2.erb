@@ -4,8 +4,8 @@
     <a href="/">トップに戻る</a><br>
   <% else %>
     <table>
-    <% @results.each do |x| %>
-      <tr><td><%= x['name']%></td><td><%= x['harvest'] %></td></tr>
+    <% @results.each_with_index do |x, i| %>
+      <tr><td><%= x['jname'] %>の収穫量<%= (i + 1) %>位は <%= x['name']%></td><td><%= x['harvest'] %></td></tr>
     <% end %>
     </table><br>
     <a href="/">トップに戻る</a><br>
