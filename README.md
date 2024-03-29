@@ -72,5 +72,5 @@ select name, harvest from work inner join sellers on work.seller_id = sellers.se
 # Sinatra の起動
 下記のコマンドで、**Sinatra** が起動します。
 ```
-ruby mysql.rb
+ruby ./paizacloudsinatra/mysql.rb
 ```
