@@ -42,13 +42,13 @@ create table Amazon.work (item_id VARCHAR(50) NOT NULL, seller_id VARCHAR(50) NO
 ## テーブルの内容確認
 describe goods;
 # テーブルへデータ挿入
-INSERT INTO goods VALUES ('G0001','いちご','strawberry');
-INSERT INTO goods VALUES ('G0002','メロン','melon');
-INSERT INTO goods VALUES ('G0003','すいか','watermelon');
-INSERT INTO goods VALUES ('G0004','みかん','mandarin orange');
-INSERT INTO goods VALUES ('G0005','りんご','apple');
-INSERT INTO goods VALUES ('G0006','日本梨','Japanese pear');
-INSERT INTO goods VALUES ('G0007','西洋梨','pear');
+INSERT INTO items VALUES ('G0001','いちご','strawberry');
+INSERT INTO items VALUES ('G0002','メロン','melon');
+INSERT INTO items VALUES ('G0003','すいか','watermelon');
+INSERT INTO items VALUES ('G0004','みかん','mandarin orange');
+INSERT INTO items VALUES ('G0005','りんご','apple');
+INSERT INTO items VALUES ('G0006','日本梨','Japanese pear');
+INSERT INTO items VALUES ('G0007','西洋梨','pear');
 # テーブルへデータ一括挿入
 LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/items.csv' INTO TABLE items COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
 LOAD DATA LOCAL INFILE '/home/ubuntu/paizacloudsinatra/data/sellers.csv' INTO TABLE sellers COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n';
