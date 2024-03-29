@@ -1,14 +1,24 @@
 # paizacloudsinatra
 ハンズオン用の資料です。
+# Excel 説明資料
+
 # Sinatra
 WEBアプリケーション部分は、**Sinatra** を使用します。
-https://sinatrarb.com/
+https://sinatrarb.com/  
+[Sinatra - wikipedia](https://ja.wikipedia.org/wiki/Sinatra) とは、Rubyで作成されたオープンソースのWebアプリケーションフレームワーク、マイクロフレームワーク。
+|言語|代表的なマイクロフレームワーク|
+|:--:|:--:|
+|Ruby|Sinatra|
+|Python|Flask|
+|PHP|Slim|
+|Java|Spark|
 # MySQL
 データベースは、**MySQL** を使用します。
 https://www.mysql.com/jp/
 # Paiza Cloud
 開発及び動作確認環境は、**Paiza Cloud** を使用します。
-https://paiza.cloud/ja/
+https://paiza.cloud/ja/  
+[PaizaCloud - wikipedia](https://ja.wikipedia.org/wiki/PaizaCloud) とは、ブラウザを開くだけでエディタ、Webサーバ、DB等の開発環境が完了、OSの種類やバージョンなどに関係なくすぐに開発を進めることができる、学習や研修に最適なクラウド型開発環境サービス。
 # Github clone
 次のコマンドを実行すると、リポジトリ がクローンされます。
 ```
